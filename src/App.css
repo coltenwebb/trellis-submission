@@ -1,38 +1,85 @@
 .App {
-  text-align: center;
+  padding: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+}
+
+.card-box {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+}
+
+.sensor-card {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 400px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.sensor-card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.sensor-card .info {
+  padding: 20px;
+}
+
+.sensor-card.expanded {
+  width: 840px;
+}
+
+.gateway-title {
+  color: gray;
+}
+
+.hint {
+  color: gray;
+}
+
+/*COPIED FROM https://www.w3schools.com/css/css_tooltip.asp */
+/* Tooltip container */
+.tooltip {
+  margin-left: 10px;
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip.error {
+  color: darkred;
+}
+.tooltip.warning {
+  color: goldenrod;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  font-size: 15px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  padding: 5px;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.card-title {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
